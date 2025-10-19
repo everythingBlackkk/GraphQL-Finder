@@ -1,6 +1,7 @@
 # GraphQL-Finder
 
 A Chrome extension that automatically detects GraphQL endpoints on any website you visit.
+![graphQlFiner](https://raw.githubusercontent.com/everythingBlackkk/GraphQL-Finder/refs/heads/main/banner/graphFinder.png)
 
 ## Features
 
