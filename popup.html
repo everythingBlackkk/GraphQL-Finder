@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GraphQL Finder</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="header-content">
+        <svg class="logo" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <h1>GraphQL Finder</h1>
+      </div>
+      <button id="clearBtn" class="clear-btn" title="Clear all endpoints">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M3 6h18M19 6v14a2 2 0 01-2 2H7a2 2 0 01-2-2V6m3 0V4a2 2 0 012-2h4a2 2 0 012 2v2"/>
+        </svg>
+      </button>
+    </header>
+
+    <div id="stats" class="stats">
+      <div class="stat-item">
+        <span class="stat-label">Endpoints Found:</span>
+        <span id="endpointCount" class="stat-value">0</span>
+      </div>
+    </div>
+
+    <div id="content">
+      <div id="loading" class="loading">
+        <div class="spinner"></div>
+        <p>Scanning for GraphQL endpoints...</p>
+      </div>
+
+      <div id="emptyState" class="empty-state" style="display: none;">
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="8"/>
+          <path d="M21 21l-4.35-4.35"/>
+        </svg>
+        <h3>No GraphQL Endpoints Found</h3>
+        <p>Browse a website that uses GraphQL to detect endpoints automatically.</p>
+      </div>
+
+      <div id="endpointsList" class="endpoints-list" style="display: none;"></div>
+    </div>
+
+    <footer>
+      <button id="exportBtn" class="export-btn">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/>
+        </svg>
+        Export Endpoints
+      </button>
+    </footer>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
