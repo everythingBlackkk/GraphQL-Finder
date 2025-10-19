@@ -35,6 +35,8 @@ A Chrome extension that automatically detects GraphQL endpoints on any website y
 2. **Click the extension icon** in your Chrome toolbar
 
 3. **View detected endpoints** in the popup window
+
+
 ![photoBlablabla](https://i.ibb.co/Nd510G6G/image.png)
 
 ## Author
